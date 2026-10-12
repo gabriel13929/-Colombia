@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Colômbia: guia educativo</title>
+<meta name="description" content="Geografia, história, cultura, economia, biodiversidade e curiosidades da Colômbia, em português.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#FCD116; --blue:#003893; --red:#CE1126;
+  --bg:#F5F7FC; --surface:#FFFFFF; --text:#14203C; --muted:#4B5877; --border:#D9DEEC;
+  --ink:#003893; --tint-y:#FFF2B3; --tint-b:#E2EAFA; --tint-r:#FBE2E5;
+  --shadow:0 1px 0 rgba(0,20,60,.06);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1120; --surface:#141C30; --text:#EDF0F8; --muted:#A9B3CE; --border:#28345A;
+    --ink:#9DBBFF; --tint-y:#3A3310; --tint-b:#14264D; --tint-r:#3B1319; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1120; --surface:#141C30; --text:#EDF0F8; --muted:#A9B3CE; --border:#28345A;
+  --ink:#9DBBFF; --tint-y:#3A3310; --tint-b:#14264D; --tint-r:#3B1319; --shadow:none;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;}}
+*,*::before,*::after{box-sizing:inherit;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Literata',Georgia,'Times New Roman',serif;font-size:1.0625rem;line-height:1.7;-webkit-text-size-adjust:100%;}
+h1,h2,h3,h4,.sans{font-family:'Bricolage Grotesque','Trebuchet MS','Segoe UI',system-ui,sans-serif;}
+img,svg{max-width:100%;display:block;}
+a{color:var(--ink);}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* Barra de navegação */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--border);}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:4px;background:linear-gradient(90deg,var(--yellow) 0 50%,var(--blue) 50% 75%,var(--red) 75% 100%);}
+.topbar-in{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:14px;}
+.brand{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink);flex:none;}
+.topbar nav{flex:1;min-width:0;}
+.topbar ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto;position:relative;scrollbar-width:none;}
+.topbar ul::-webkit-scrollbar{display:none;}
+.topbar nav a{display:block;white-space:nowrap;padding:8px 13px;border-radius:999px;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;font-size:.92rem;text-decoration:none;color:var(--text);}
+.topbar nav a:hover{background:var(--tint-b);}
+.topbar nav a.on{background:var(--blue);color:#fff;}
+
+/* Hero: a página começa como a bandeira (amarelo, azul, vermelho) */
+.hero{background:var(--yellow);color:#0B1F4D;padding:56px 0 64px;margin-top:5px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;}
+.hero h1{font-weight:800;font-size:clamp(2.2rem,5.2vw,3.8rem);line-height:1.05;margin:0 0 18px;letter-spacing:-.02em;color:#0B2A70;}
+.hero p.lead{font-size:1.2rem;max-width:34em;margin:0 0 26px;}
+.btns{display:flex;flex-wrap:wrap;gap:12px;}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;text-decoration:none;font-size:1rem;}
+.btn.primary{background:var(--blue);color:#fff;}
+.btn.ghost{border:2px solid #0B2A70;color:#0B2A70;}
+.hero figure{margin:0;border-radius:22px;overflow:hidden;border:4px solid #0B2A70;box-shadow:10px 10px 0 var(--red);}
+.facts{background:var(--blue);color:#fff;}
+.facts dl{max-width:1120px;margin:0 auto;padding:22px 20px;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;}
+.facts div{min-width:0;}
+.facts dt{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:.85rem;opacity:.8;}
+.facts dd{margin:2px 0 0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:1.08rem;line-height:1.25;}
+.redband{height:14px;background:var(--red);}
+
+/* Seções */
+.sec{position:relative;padding:84px 0 76px;--accent:var(--yellow);}
+.sec.alt{background:var(--surface);}
+.sec + .sec::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='12' viewBox='0 0 72 12'%3E%3Cpath d='M0 12L12 0l12 12z' fill='%23FCD116'/%3E%3Cpath d='M24 12L36 0l12 12z' fill='%23003893'/%3E%3Cpath d='M48 12L60 0l12 12z' fill='%23CE1126'/%3E%3C/svg%3E") repeat-x;}
+.sec.b{--accent:var(--blue);}
+.sec.r{--accent:var(--red);}
+.sec-head{margin-bottom:34px;}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.1;margin:0 0 14px;padding-left:16px;border-left:10px solid var(--accent);color:var(--ink);letter-spacing:-.015em;}
+.sec-head p{margin:0;max-width:44em;font-size:1.15rem;color:var(--muted);}
+h3{font-size:1.45rem;line-height:1.2;margin:34px 0 10px;color:var(--ink);}
+h4{font-size:1.15rem;line-height:1.25;margin:0 0 6px;}
+p{margin:0 0 1em;max-width:42em;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+.split.rev > :first-child{order:2;}
+figure{margin:0;}
+.fig{border-radius:18px;overflow:hidden;border:1px solid var(--border);background:var(--surface);}
+figcaption{font-size:.9rem;color:var(--muted);padding:10px 4px 0;font-style:italic;line-height:1.5;}
+.sticky{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:18px 0 0;}
+.card{background:var(--surface);border:1px solid var(--border);border-top:6px solid var(--c,var(--yellow));border-radius:14px;padding:18px 18px 8px;box-shadow:var(--shadow);}
+.alt .card{background:var(--bg);}
+.card:nth-child(3n+1){--c:var(--yellow);}
+.card:nth-child(3n+2){--c:var(--blue);}
+.card:nth-child(3n){--c:var(--red);}
+.card p{font-size:.98rem;line-height:1.6;}
+.card .where{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:.88rem;color:var(--muted);margin:0 0 8px;font-weight:500;}
+
+.fact{background:var(--tint-y);border-left:6px solid var(--yellow);border-radius:0 12px 12px 0;padding:14px 18px 2px;margin:24px 0;max-width:42em;}
+.fact.b{background:var(--tint-b);border-color:var(--blue);}
+.fact.r{background:var(--tint-r);border-color:var(--red);}
+.fact strong:first-child{font-family:'Bricolage Grotesque',system-ui,sans-serif;}
+
+.chips{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.chips li{background:var(--tint-b);border-radius:12px;padding:12px 16px;font-size:.98rem;line-height:1.55;}
+.chips li:nth-child(3n+1){background:var(--tint-y);}
+.chips li:nth-child(3n){background:var(--tint-r);}
+.chips b{font-family:'Bricolage Grotesque',system-ui,sans-serif;}
+
+.scroll{overflow-x:auto;border:1px solid var(--border);border-radius:14px;margin:16px 0;}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.96rem;line-height:1.5;background:var(--surface);}
+.alt table{background:var(--bg);}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+th{font-family:'Bricolage Grotesque',system-ui,sans-serif;background:var(--tint-b);color:var(--ink);}
+tr:last-child td{border-bottom:0;}
+
+.timeline{list-style:none;margin:10px 0 0;padding:0 0 0 30px;border-left:4px solid var(--border);}
+.timeline li{position:relative;padding:0 0 26px 22px;max-width:46em;}
+.timeline li::before{content:"";position:absolute;left:-44px;top:7px;width:18px;height:18px;border-radius:50%;background:var(--c,var(--yellow));border:4px solid var(--surface);box-shadow:0 0 0 2px var(--c,var(--yellow));}
+.alt .timeline li::before{border-color:var(--surface);}
+.timeline li:nth-child(3n+1){--c:var(--yellow);}
+.timeline li:nth-child(3n+2){--c:var(--blue);}
+.timeline li:nth-child(3n){--c:var(--red);}
+.timeline .yr{display:block;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:1.2rem;color:var(--ink);}
+.timeline p{margin:2px 0 0;}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:10px;}
+.tile{border-radius:16px;padding:18px 20px 6px;background:var(--tint-b);}
+.tile:nth-child(3n+1){background:var(--tint-y);}
+.tile:nth-child(3n){background:var(--tint-r);}
+.tile h4{color:var(--ink);}
+.tile p{font-size:.98rem;line-height:1.6;}
+
+ul.plain{padding-left:1.2em;margin:0 0 1em;max-width:42em;}
+ul.plain li{margin-bottom:.4em;}
+
+footer{background:var(--blue);color:#fff;padding:40px 0 34px;margin-top:0;position:relative;}
+footer::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='12' viewBox='0 0 72 12'%3E%3Cpath d='M0 12L12 0l12 12z' fill='%23FCD116'/%3E%3Cpath d='M24 12L36 0l12 12z' fill='%23003893'/%3E%3Cpath d='M48 12L60 0l12 12z' fill='%23CE1126'/%3E%3C/svg%3E") repeat-x;}
+footer .wrap{display:grid;gap:10px;}
+footer p{margin:0;max-width:52em;font-size:.95rem;line-height:1.6;}
+footer .name{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:1.4rem;}
+footer a{color:var(--yellow);}
+.flagbar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--yellow) 0 50%,#fff 50% 50%,var(--red) 75% 100%);display:none;}
+
+svg text{font-family:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;}
+
+@media (max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr;gap:28px;}
+  .split.rev > :first-child{order:0;}
+  .sticky{position:static;}
+  .facts dl{grid-template-columns:repeat(2,1fr);}
+  .sec{padding:68px 0 56px;}
+  .brand{font-size:1.1rem;}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px;}
+  .hero{padding:36px 0 44px;}
+  .hero figure{box-shadow:6px 6px 0 var(--red);}
+  body{font-size:1rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#topo">Colômbia</a>
+    <nav aria-label="Seções do site">
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#geografia">Geografia e clima</a></li>
+        <li><a href="#cultura">Cultura</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#turismo">Turismo</a></li>
+        <li><a href="#economia">Economia</a></li>
+        <li><a href="#biodiversidade">Biodiversidade</a></li>
+        <li><a href="#populacao">População e idiomas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="topo" aria-labelledby="titulo">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="titulo">Colômbia, onde os Andes encontram o Caribe, o Pacífico e a Amazônia</h1>
+      <p class="lead">Um passeio pela geografia, pela história, pelas festas e pela natureza de um dos países mais diversos do planeta.</p>
+      <div class="btns">
+        <a class="btn primary" href="#introducao">Começar a viagem</a>
+        <a class="btn ghost" href="#curiosidades">Ver curiosidades</a>
+      </div>
+    </div>
+    <figure>
+      <svg viewBox="0 0 560 420" role="img" aria-label="Ilustração dos Andes colombianos ao amanhecer, com picos nevados, vale verde e palmeiras-de-cera">
+        <defs>
+          <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B3D9C"/><stop offset=".55" stop-color="#5C97E0"/><stop offset="1" stop-color="#FFE27A"/></linearGradient>
+          <radialGradient id="gSun"><stop offset="0" stop-color="#FFF3A8" stop-opacity=".95"/><stop offset="1" stop-color="#FCD116" stop-opacity="0"/></radialGradient>
+          <g id="palma" stroke-linecap="round">
+            <line x1="0" y1="0" x2="2" y2="-140" stroke="#E6DFC4" stroke-width="5"/>
+            <g stroke="#0B4D2E" stroke-width="4">
+              <line x1="2" y1="-140" x2="-30" y2="-124"/><line x1="2" y1="-140" x2="34" y2="-124"/>
+              <line x1="2" y1="-140" x2="-22" y2="-158"/><line x1="2" y1="-140" x2="26" y2="-158"/>
+              <line x1="2" y1="-140" x2="2" y2="-170"/><line x1="2" y1="-140" x2="-38" y2="-142"/><line x1="2" y1="-140" x2="42" y2="-142"/>
+            </g>
+          </g>
+        </defs>
+        <rect width="560" height="420" fill="url(#gSky)"/>
+        <circle cx="400" cy="250" r="130" fill="url(#gSun)"/>
+        <circle cx="400" cy="250" r="38" fill="#FCD116"/>
+        <path d="M0 250 L70 170 L110 205 L170 130 L230 210 L290 160 L350 235 L420 150 L480 220 L560 175 L560 420 L0 420Z" fill="#335FAE"/>
+        <path d="M170 130 L152 160 L162 156 L170 166 L180 155 L190 160Z" fill="#fff" opacity=".92"/>
+        <path d="M420 150 L402 178 L412 173 L420 183 L430 172 L439 178Z" fill="#fff" opacity=".92"/>
+        <path d="M70 170 L58 188 L66 185 L72 192 L80 184 L84 188Z" fill="#fff" opacity=".85"/>
+        <path d="M0 300 C60 260 120 270 180 290 C250 312 300 250 370 262 C450 276 500 300 560 280 L560 420 L0 420Z" fill="#2E8B57"/>
+        <path d="M0 350 C80 320 160 345 240 340 C340 334 430 315 560 345 L560 420 L0 420Z" fill="#14663F"/>
+        <g fill="none" stroke="#0E4F31" stroke-width="3" opacity=".7">
+          <path d="M0 372 C90 345 170 368 250 362 C350 355 440 338 560 366"/>
+          <path d="M0 392 C100 366 180 388 260 382 C360 376 450 360 560 388"/>
+        </g>
+        <use href="#palma" x="110" y="352"/>
+        <use href="#palma" x="160" y="362" transform="translate(0 0) scale(1)"/>
+        <use href="#palma" x="450" y="340"/>
+        <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+          <path d="M70 80 q10 -10 20 0 q10 -10 20 0"/><path d="M130 55 q8 -8 16 0 q8 -8 16 0"/><path d="M300 95 q8 -8 16 0 q8 -8 16 0"/>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<div class="facts">
+  <dl>
+    <div><dt>Capital</dt><dd>Bogotá</dd></div>
+    <div><dt>Área</dt><dd>cerca de 1,14 milhão de km²</dd></div>
+    <div><dt>População</dt><dd>cerca de 52 milhões</dd></div>
+    <div><dt>Idioma oficial</dt><dd>Espanhol</dd></div>
+    <div><dt>Moeda</dt><dd>Peso colombiano</dd></div>
+    <div><dt>Divisão</dt><dd>32 departamentos e o Distrito Capital</dd></div>
+  </dl>
+</div>
+<div class="redband" aria-hidden="true"></div>
+
+<!-- 1. INTRODUÇÃO -->
+<section class="sec" id="introducao" aria-labelledby="h-intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-intro">Introdução</h2>
+      <p>A Colômbia fica no canto noroeste da América do Sul, bem perto da linha do Equador, e liga o continente sul-americano à América Central.</p>
+    </div>
+    <div class="split">
+      <div>
+        <p>O nome do país homenageia Cristóvão Colombo. A ideia de chamar o Novo Mundo de “Colômbia” é associada ao venezuelano Francisco de Miranda, e o nome foi adotado pelos líderes da independência no início do século XIX.</p>
+        <p>É o <strong>único país sul-americano com litoral em dois oceanos</strong>: o Mar do Caribe (parte do Atlântico), ao norte, e o Oceano Pacífico, a oeste. Por isso, a Colômbia é chamada de “país das duas costas”.</p>
+        <p>Com cerca de 1,14 milhão de km², tem aproximadamente 13% do tamanho do Brasil. Mesmo assim, reúne desertos, neve, savanas, florestas, praias e cidades a mais de 2.600 metros de altitude.</p>
+        <h3>Países vizinhos</h3>
+        <ul class="plain">
+          <li><strong>Venezuela:</strong> a leste e a nordeste.</li>
+          <li><strong>Brasil:</strong> a sudeste, na região amazônica, com mais de 1.600 km de fronteira.</li>
+          <li><strong>Peru:</strong> ao sul.</li>
+          <li><strong>Equador:</strong> a sudoeste.</li>
+          <li><strong>Panamá:</strong> a noroeste, na ponte de terra entre as duas Américas.</li>
+        </ul>
+        <p>No mar, a Colômbia também tem fronteiras marítimas com países como Jamaica, Haiti, República Dominicana, Honduras, Nicarágua e Costa Rica.</p>
+      </div>
+      <figure class="sticky">
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Esquema simplificado do mapa da Colômbia com os países vizinhos e os dois oceanos">
+            <rect width="560" height="380" fill="#CFE6FA"/>
+            <polygon transform="translate(180 10)" points="174,12 146,26 116,36 104,40 90,52 86,70 64,86 52,88 42,116 50,150 58,182 24,224 24,236 50,244 74,256 94,262 110,280 150,308 202,344 212,344 212,282 208,260 258,236 244,204 250,180 252,136 204,138 200,118 160,120 150,100 140,76 144,50 162,22" fill="#FCD116" stroke="#003893" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="298" cy="176" r="7" fill="#CE1126" stroke="#fff" stroke-width="2"/>
+            <text x="310" y="172" font-size="16" font-weight="700" fill="#003893">Bogotá</text>
+            <circle cx="382" cy="354" r="4" fill="#003893"/>
+            <text x="392" y="358" font-size="13" fill="#0E1A33">Leticia</text>
+            <g font-size="17" font-weight="700" fill="#0E1A33">
+              <text x="212" y="102" text-anchor="end">Panamá</text>
+              <text x="430" y="196">Venezuela</text>
+              <text x="410" y="318">Brasil</text>
+              <text x="326" y="334" text-anchor="end">Peru</text>
+              <text x="236" y="268" text-anchor="end">Equador</text>
+            </g>
+            <g font-size="15" font-style="italic" fill="#1B4F96">
+              <text x="26" y="60">Mar do Caribe</text>
+              <text x="26" y="190">Oceano Pacífico</text>
+            </g>
+            <text x="16" y="368" font-size="12" fill="#1B4F96">Esquema simplificado, fora de escala.</text>
+          </svg>
+        </div>
+        <figcaption>Esquema simplificado. As ilhas de San Andrés e Providencia ficam bem mais a noroeste, no Caribe, e não aparecem no desenho.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Seis regiões naturais</h3>
+    <p>Os geógrafos costumam dividir o país em seis grandes regiões, cada uma com paisagem, clima e tradições próprias.</p>
+    <ul class="chips">
+      <li><b>Andina:</b> montanhas, vales e clima ameno. Concentra a maior parte da população e cidades como Bogotá, Medellín e Cali.</li>
+      <li><b>Caribe:</b> planícies e praias ao norte, com a Sierra Nevada de Santa Marta. Cartagena e Barranquilla ficam aqui.</li>
+      <li><b>Pacífica:</b> costa de selva úmida e mangues, com forte presença afrocolombiana. Inclui o Chocó e o porto de Buenaventura.</li>
+      <li><b>Orinoquía:</b> os Llanos Orientais, vastas savanas de pecuária e berço do joropo.</li>
+      <li><b>Amazônia:</b> floresta e rios no sul e sudeste, com muitos povos indígenas. Leticia é a principal cidade.</li>
+      <li><b>Insular:</b> ilhas do Caribe (San Andrés e Providencia) e do Pacífico (Gorgona e Malpelo).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. GEOGRAFIA E CLIMA -->
+<section class="sec alt b" id="geografia" aria-labelledby="h-geo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-geo">Geografia e clima</h2>
+      <p>Na Colômbia, o clima depende menos da estação do ano e mais da altitude: quem sobe a montanha troca o calor do litoral pelo frio dos picos.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">Relevo e montanhas</h3>
+        <p>No sul do país, a Cordilheira dos Andes se divide em <strong>três ramos</strong>: as cordilheiras Ocidental, Central e Oriental. Entre elas correm os vales profundos dos rios Cauca e Magdalena, onde vive grande parte dos colombianos.</p>
+        <p>Isolada ao norte, a <strong>Sierra Nevada de Santa Marta</strong> sobe quase direto do mar do Caribe até cerca de 5.700 metros, nos picos Cristóbal Colón e Simón Bolívar, os mais altos do país. É considerada a cadeia litorânea mais alta do mundo.</p>
+        <p>Outras montanhas famosas são o Nevado del Huila, o Nevado del Ruiz e a Sierra Nevada del Cocuy, com geleiras na Cordilheira Oriental.</p>
+
+        <h3>Rios</h3>
+        <ul class="plain">
+          <li><strong>Magdalena:</strong> o rio mais importante, com cerca de 1.500 km. Nasce nos Andes do sul e deságua no Caribe, perto de Barranquilla.</li>
+          <li><strong>Cauca:</strong> principal afluente do Magdalena.</li>
+          <li><strong>Atrato:</strong> corta a selva do Chocó e chega ao Golfo de Urabá.</li>
+          <li><strong>Orinoco:</strong> forma parte da fronteira com a Venezuela e recebe rios como o Meta e o Guaviare.</li>
+          <li><strong>Amazonas, Caquetá e Putumayo:</strong> pertencem à bacia amazônica, no sul do país.</li>
+        </ul>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 520 360" role="img" aria-label="Montanha dividida em faixas de altitude: cálido, temperado, frio, páramo e nival">
+            <defs><clipPath id="cMont"><path d="M20 340 L200 30 L380 340Z"/></clipPath></defs>
+            <rect width="520" height="360" fill="#CFE6FA"/>
+            <rect y="340" width="520" height="20" fill="#2E8B57"/>
+            <g clip-path="url(#cMont)">
+              <rect y="30" width="400" height="75" fill="#FFFFFF"/>
+              <rect y="105" width="400" height="65" fill="#9CB9AC"/>
+              <rect y="170" width="400" height="60" fill="#4F9D69"/>
+              <rect y="230" width="400" height="55" fill="#9BC653"/>
+              <rect y="285" width="400" height="60" fill="#E8A33D"/>
+            </g>
+            <path d="M20 340 L200 30 L380 340Z" fill="none" stroke="#003893" stroke-width="3" stroke-linejoin="round"/>
+            <g font-size="21" font-weight="700" fill="#0E1A33">
+              <text x="396" y="76">Nival</text>
+              <text x="396" y="144">Páramo</text>
+              <text x="396" y="206">Frio</text>
+              <text x="396" y="263">Temperado</text>
+              <text x="396" y="320">Cálido</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Os “pisos térmicos”: quanto mais alto, mais frio.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Florestas, planícies e desertos</h3>
+    <div class="cards">
+      <article class="card">
+        <h4>Floresta amazônica</h4>
+        <p>Cobre mais de um terço do território, no sul e sudeste. É uma área de pouca população, rios largos e muitos povos indígenas.</p>
+      </article>
+      <article class="card">
+        <h4>Selva do Chocó</h4>
+        <p>Na costa do Pacífico, é uma das regiões mais chuvosas do planeta, com floresta densa, mangues e uma natureza riquíssima.</p>
+      </article>
+      <article class="card">
+        <h4>Llanos Orientais</h4>
+        <p>Planícies de savana entre os Andes e o rio Orinoco, famosas pela criação de gado e pelas cheias sazonais dos rios.</p>
+      </article>
+      <article class="card">
+        <h4>Páramos</h4>
+        <p>Campos de altitude cobertos de frailejones. Funcionam como grandes esponjas que armazenam a água da neblina e alimentam rios.</p>
+      </article>
+      <article class="card">
+        <h4>La Guajira e Tatacoa</h4>
+        <p>No extremo norte, o deserto da Guajira encontra o mar. No Huila, o deserto de Tatacoa tem terras avermelhadas e céu muito limpo à noite.</p>
+      </article>
+      <article class="card">
+        <h4>Caño Cristales</h4>
+        <p>Rio da Serranía de la Macarena, conhecido como “rio das cinco cores” pelas algas e plantas aquáticas que colorem o leito em certas épocas.</p>
+      </article>
+    </div>
+
+    <h3>Praias e ilhas</h3>
+    <p>No <strong>Caribe</strong>, destacam-se as praias do Parque Tayrona, de Palomino, do Rodadero (Santa Marta), de Playa Blanca e das Ilhas do Rosário, perto de Cartagena. O arquipélago de <strong>San Andrés e Providencia</strong> é famoso pelo “mar de sete cores”, com tons que vão do verde claro ao azul-escuro.</p>
+    <p>No <strong>Pacífico</strong>, as praias de Nuquí e Bahía Solano têm areia escura, selva até a beira-mar e visitas de baleias-jubarte, em geral de julho a outubro.</p>
+
+    <h3>Clima: os pisos térmicos</h3>
+    <p>Como a Colômbia está perto do Equador, a temperatura muda pouco durante o ano. O que faz diferença é a altitude. Por isso, o país é dividido em “pisos térmicos”:</p>
+    <div class="scroll" role="region" aria-label="Tabela dos pisos térmicos" tabindex="0">
+      <table>
+        <thead><tr><th>Piso</th><th>Altitude</th><th>Temperatura média</th><th>Exemplos</th></tr></thead>
+        <tbody>
+          <tr><td>Cálido</td><td>0 a 1.000 m</td><td>acima de 24 °C</td><td>Cartagena, Santa Marta, Barranquilla, Leticia</td></tr>
+          <tr><td>Temperado</td><td>1.000 a 2.000 m</td><td>17 a 24 °C</td><td>Medellín e a região cafeeira</td></tr>
+          <tr><td>Frio</td><td>2.000 a 3.000 m</td><td>12 a 17 °C</td><td>Bogotá (2.640 m), Tunja, Pasto</td></tr>
+          <tr><td>Páramo</td><td>3.000 a 4.700 m</td><td>abaixo de 12 °C</td><td>Páramos de Sumapaz e Chingaza</td></tr>
+          <tr><td>Nival</td><td>acima de 4.700 m</td><td>perto de 0 °C ou menos</td><td>Sierra Nevada de Santa Marta, Cocuy</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Em vez de verão e inverno, a Colômbia tem épocas mais secas e mais chuvosas. Na região andina, as chuvas costumam ter dois picos por ano, aproximadamente de março a maio e de setembro a novembro. Os fenômenos El Niño e La Niña também podem deixar alguns anos mais secos ou mais chuvosos.</p>
+    <aside class="fact b"><p><strong>Você sabia?</strong> Em um único dia de viagem é possível sair de uma praia a 30 °C e chegar a um páramo onde a temperatura cai para menos de 10 °C.</p></aside>
+  </div>
+</section>
+
+<!-- 3. CULTURA E TRADIÇÕES -->
+<section class="sec r" id="cultura" aria-labelledby="h-cult">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-cult">Cultura e tradições</h2>
+      <p>A cultura colombiana nasceu do encontro de povos indígenas, europeus e africanos, e muda de região para região: o litoral dança cumbia, as montanhas cantam bambuco e os Llanos tocam joropo.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">Costumes</h3>
+        <p>Os colombianos são conhecidos pela hospitalidade e pela importância dada à família. É comum reunir parentes em almoços de domingo e comemorar datas religiosas com a vizinhança.</p>
+        <p>O tratamento costuma ser cordial. É muito usado o “usted” (“o senhor/a senhora”) mesmo entre pessoas próximas, como sinal de carinho e respeito. Uma xícara de <em>tinto</em> (café preto) é a pausa clássica de qualquer conversa.</p>
+        <p>A maioria da população é católica, e festas como a Semana Santa e o Natal têm muita força. Também existem comunidades protestantes e as espiritualidades dos povos indígenas.</p>
+        <p>O futebol é paixão nacional, e a Colômbia também é referência no ciclismo, esporte popular nas estradas de montanha.</p>
+        <h3>Artesanato</h3>
+        <p>O <strong>sombrero vueltiao</strong>, trançado com fibra de cana-flecha pelo povo Zenú, é símbolo cultural da nação. As <strong>mochilas</strong> tecidas pelos povos Wayuu e Arhuaco, a cerâmica de La Chamba e a filigrana de ouro de Mompox também são tesouros artesanais.</p>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Ilustração de um sombrero vueltiao, bandeirinhas nas cores da bandeira e notas musicais">
+            <rect width="560" height="380" fill="#FFF3B8"/>
+            <path d="M0 40 Q280 180 560 40" fill="none" stroke="#5B4A2A" stroke-width="3"/>
+            <g>
+              <polygon points="46,53 74,53 60,83" fill="#FCD116" stroke="#B89A00"/>
+              <polygon points="106,64 134,64 120,94" fill="#003893"/>
+              <polygon points="166,70 194,70 180,100" fill="#CE1126"/>
+              <polygon points="226,74 254,74 240,104" fill="#FCD116" stroke="#B89A00"/>
+              <polygon points="286,75 314,75 300,105" fill="#003893"/>
+              <polygon points="346,72 374,72 360,102" fill="#CE1126"/>
+              <polygon points="406,66 434,66 420,96" fill="#FCD116" stroke="#B89A00"/>
+              <polygon points="466,57 494,57 480,87" fill="#003893"/>
+              <polygon points="526,45 554,45 540,75" fill="#CE1126"/>
+            </g>
+            <ellipse cx="280" cy="270" rx="200" ry="56" fill="#EFE0B2" stroke="#1A1A1A" stroke-width="3"/>
+            <ellipse cx="280" cy="270" rx="172" ry="46" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-dasharray="14 8"/>
+            <ellipse cx="280" cy="270" rx="136" ry="36" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-dasharray="14 8"/>
+            <path d="M200 262 C196 170 230 130 280 130 C330 130 364 170 360 262 Z" fill="#EFE0B2" stroke="#1A1A1A" stroke-width="3"/>
+            <ellipse cx="280" cy="134" rx="40" ry="11" fill="#E3D199" stroke="#1A1A1A" stroke-width="2"/>
+            <g fill="none" stroke="#1A1A1A" stroke-width="8" stroke-dasharray="12 7">
+              <path d="M207 190 Q280 208 353 190"/>
+              <path d="M203 222 Q280 244 357 222"/>
+            </g>
+            <path d="M200 262 Q280 292 360 262" fill="none" stroke="#1A1A1A" stroke-width="10"/>
+            <g font-size="46" font-weight="700">
+              <text x="48" y="210" fill="#CE1126">♪</text>
+              <text x="480" y="220" fill="#003893">♫</text>
+              <text x="86" y="300" fill="#003893">♫</text>
+              <text x="450" y="300" fill="#CE1126">♪</text>
+            </g>
+            <g>
+              <rect x="0" y="342" width="70" height="38" fill="#CE1126"/><rect x="70" y="342" width="70" height="38" fill="#FCD116"/>
+              <rect x="140" y="342" width="70" height="38" fill="#003893"/><rect x="210" y="342" width="70" height="38" fill="#FFFFFF"/>
+              <rect x="280" y="342" width="70" height="38" fill="#2E8B57"/><rect x="350" y="342" width="70" height="38" fill="#CE1126"/>
+              <rect x="420" y="342" width="70" height="38" fill="#FCD116"/><rect x="490" y="342" width="70" height="38" fill="#003893"/>
+              <path d="M0 342 l35 -14 l35 14 l35 -14 l35 14 l35 -14 l35 14 l35 -14 l35 14 l35 -14 l35 14 l35 -14 l35 14 l35 -14 l35 14" fill="none" stroke="#14203C" stroke-width="3"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Sombrero vueltiao, bandeirinhas de festa e as listras coloridas dos tecidos típicos.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Festas populares</h3>
+    <div class="cards">
+      <article class="card">
+        <h4>Carnaval de Barranquilla</h4>
+        <p class="where">Fevereiro ou março, antes da Quaresma</p>
+        <p>Um dos maiores carnavais da América Latina, com desfiles, fantasias como a marimonda e o congo, cumbia e a Batalha de Flores. É Patrimônio Imaterial da Humanidade (UNESCO).</p>
+      </article>
+      <article class="card">
+        <h4>Feira das Flores</h4>
+        <p class="where">Medellín, agosto</p>
+        <p>Os <em>silleteros</em>, camponeses de Santa Elena, desfilam carregando nas costas grandes arranjos de flores, numa tradição de várias gerações.</p>
+      </article>
+      <article class="card">
+        <h4>Festival da Lenda Vallenata</h4>
+        <p class="where">Valledupar, abril</p>
+        <p>Acordeonistas competem para ser coroados Rei Vallenato, mostrando o ritmo que nasceu no norte do país e é reconhecido pela UNESCO.</p>
+      </article>
+      <article class="card">
+        <h4>Carnaval de Negros e Brancos</h4>
+        <p class="where">Pasto, início de janeiro</p>
+        <p>Dias de desfiles, tintas, pó branco e carros alegóricos de grande beleza, que misturam heranças andina, indígena e africana. Também é Patrimônio da UNESCO.</p>
+      </article>
+      <article class="card">
+        <h4>Feira de Cali e Festival Petronio Álvarez</h4>
+        <p class="where">Cali, dezembro e agosto</p>
+        <p>Cali é a “capital da salsa”. Em agosto, o festival Petronio Álvarez celebra a música e a cultura afro do Pacífico.</p>
+      </article>
+      <article class="card">
+        <h4>Dia das Velinhas</h4>
+        <p class="where">7 de dezembro, em todo o país</p>
+        <p>As famílias acendem velas e lanternas nas calçadas e janelas, o que marca o início das festas de Natal.</p>
+      </article>
+    </div>
+
+    <h3>Música e danças</h3>
+    <ul class="chips">
+      <li><b>Cumbia:</b> nascida no Caribe, mistura ritmos indígenas, africanos e espanhóis. É dançada em casais, com velas e saias rodadas.</li>
+      <li><b>Vallenato:</b> do norte do país, usa acordeão, caja e guacharaca. Conta histórias do cotidiano.</li>
+      <li><b>Bambuco e pasillo:</b> ritmos da região andina, ligados à vida no campo e à música de câmara.</li>
+      <li><b>Joropo:</b> música dos Llanos, com harpa, cuatro e maracas, e dança de sapateado rápido.</li>
+      <li><b>Currulao:</b> do Pacífico, com tambores e marimba de chonta, de forte herança africana.</li>
+      <li><b>Salsa e champeta:</b> a salsa domina Cali; a champeta nasceu entre as comunidades afro de Cartagena e Palenque.</li>
+    </ul>
+
+    <h3>Arte e literatura</h3>
+    <p>O escritor <strong>Gabriel García Márquez</strong> (Aracataca, 1927) recebeu o Prêmio Nobel de Literatura em 1982 e é autor de <em>Cem Anos de Solidão</em>. O pintor e escultor <strong>Fernando Botero</strong> ficou famoso por figuras de formas volumosas. Entre os músicos conhecidos mundialmente estão Shakira, Carlos Vives, Totó la Momposina, J Balvin e Karol G.</p>
+  </div>
+</section>
+
+<!-- 4. HISTÓRIA -->
+<section class="sec alt" id="historia" aria-labelledby="h-hist">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-hist">História</h2>
+      <p>Das primeiras comunidades indígenas, há mais de dez mil anos, à Constituição de 1991, a história colombiana é feita de encontros, conflitos e muita resistência.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">Povos indígenas</h3>
+        <p>Muito antes da chegada dos europeus, o território era ocupado por dezenas de povos com línguas e costumes próprios. Alguns deixaram marcas impressionantes:</p>
+        <ul class="plain">
+          <li><strong>Muisca:</strong> viviam no altiplano de Bogotá, cultivavam milho e batata e extraíam sal e esmeraldas. Seus rituais na Laguna de Guatavita deram origem à lenda de <em>El Dorado</em>, o “homem dourado”.</li>
+          <li><strong>Tayrona:</strong> na Sierra Nevada de Santa Marta, construíram terraços de pedra e a cidade de Teyuna (Ciudad Perdida), fundada por volta do século VIII. Seus descendentes, como os Kogui e os Arhuaco, ainda vivem na região.</li>
+          <li><strong>Quimbaya e Zenú:</strong> ficaram famosos pela ourivesaria refinada, com peças de ouro de grande qualidade.</li>
+          <li><strong>San Agustín e Tierradentro:</strong> deixaram estátuas de pedra e túmulos subterrâneos pintados, hoje Patrimônio da Humanidade.</li>
+        </ul>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Ilustração de uma balsa muisca com figuras e ouro sobre um lago de montanha ao amanhecer">
+            <defs><linearGradient id="gDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F28E5A"/><stop offset=".6" stop-color="#F7C873"/><stop offset="1" stop-color="#FBEBC0"/></linearGradient></defs>
+            <rect width="560" height="380" fill="url(#gDawn)"/>
+            <circle cx="280" cy="205" r="40" fill="#FCD116"/>
+            <path d="M0 200 L80 130 L150 180 L230 110 L320 190 L400 140 L470 185 L560 130 L560 250 L0 250Z" fill="#6D8F7A"/>
+            <path d="M0 232 Q100 190 200 228 T400 222 T560 214 L560 256 L0 256Z" fill="#4C7A5C"/>
+            <rect y="250" width="560" height="130" fill="#2F6F9F"/>
+            <ellipse cx="280" cy="270" rx="130" ry="12" fill="#FFE9A0" opacity=".55"/>
+            <g transform="translate(205 292)">
+              <polygon points="-20,0 170,0 152,24 -2,24" fill="#8A5A2B"/>
+              <g fill="#C97B2B"><rect x="22" y="-26" width="14" height="26" rx="3"/><rect x="132" y="-26" width="14" height="26" rx="3"/><rect x="72" y="-36" width="18" height="36" rx="4"/></g>
+              <g fill="#F2B01E"><circle cx="29" cy="-34" r="8"/><circle cx="139" cy="-34" r="8"/><circle cx="81" cy="-46" r="10"/></g>
+              <polygon points="68,-54 74,-68 81,-56 88,-68 94,-54" fill="#F2B01E"/>
+              <g fill="#F2B01E" stroke="#B87F00"><circle cx="6" cy="-6" r="6"/><circle cx="46" cy="-6" r="5"/><circle cx="116" cy="-6" r="5"/><circle cx="158" cy="-6" r="6"/></g>
+            </g>
+            <g fill="none" stroke="#9ED0F0" stroke-width="3" stroke-linecap="round" opacity=".8">
+              <path d="M60 320 q10 -7 20 0 q10 7 20 0"/><path d="M420 330 q10 -7 20 0 q10 7 20 0"/><path d="M300 350 q10 -7 20 0 q10 7 20 0"/><path d="M120 355 q10 -7 20 0 q10 7 20 0"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Cena inspirada na cerimônia da Laguna de Guatavita, que originou a lenda de El Dorado.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Linha do tempo</h3>
+    <ol class="timeline">
+      <li><span class="yr">1499 a 1501</span><p>Os primeiros navegantes espanhóis, como Alonso de Ojeda e Rodrigo de Bastidas, chegam à costa caribenha, na região da Guajira.</p></li>
+      <li><span class="yr">1525, 1533 e 1538</span><p>São fundadas Santa Marta (1525), a cidade espanhola mais antiga ainda existente no país; Cartagena (1533), que se torna um grande porto; e Bogotá (1538), por Gonzalo Jiménez de Quesada.</p></li>
+      <li><span class="yr">Período colonial</span><p>O território passa a integrar o Vice-Reino de Nova Granada. A economia gira em torno do ouro, das esmeraldas e da agricultura, com trabalho de indígenas e de africanos escravizados. Nesse período surge San Basilio de Palenque, povoado fundado por africanos que se libertaram e que é hoje Patrimônio da UNESCO.</p></li>
+      <li><span class="yr">1781</span><p>A Revolta dos Comuneros reúne milhares de pessoas contra o aumento de impostos coloniais, um dos primeiros grandes protestos contra o domínio espanhol.</p></li>
+      <li><span class="yr">20 de julho de 1810</span><p>Em Bogotá, uma discussão por causa de um vaso de flores, o “Florero de Llorente”, dá início ao movimento que leva ao Grito de Independência, data nacional da Colômbia.</p></li>
+      <li><span class="yr">7 de agosto de 1819</span><p>Simón Bolívar e o exército patriota atravessam os Andes e vencem a Batalha de Boyacá, que garante a independência da região. Nasce a Grã-Colômbia, união de Colômbia, Venezuela, Equador e Panamá.</p></li>
+      <li><span class="yr">1830 a 1831</span><p>A Grã-Colômbia se desfaz. Venezuela e Equador seguem como países independentes, e a região da atual Colômbia continua, com o Panamá, como Nova Granada.</p></li>
+      <li><span class="yr">1851 e 1886</span><p>A escravidão é abolida em 1851. Em 1886, uma nova Constituição organiza o país como República da Colômbia.</p></li>
+      <li><span class="yr">1899 a 1903</span><p>A Guerra dos Mil Dias, entre liberais e conservadores, devasta o país. Em 1903, o Panamá se separa da Colômbia.</p></li>
+      <li><span class="yr">Século XX</span><p>O café impulsiona a economia e as cidades crescem. Em 1948, o assassinato do líder político Jorge Eliécer Gaitán provoca o “Bogotazo”, uma onda de protestos em Bogotá. As décadas seguintes foram marcadas por um longo conflito armado interno, que afetou profundamente a vida de milhões de pessoas.</p></li>
+      <li><span class="yr">1991</span><p>Uma nova Constituição reconhece que a Colômbia é um país de muitos povos e culturas, e protege os direitos de indígenas e afrocolombianos.</p></li>
+      <li><span class="yr">2016</span><p>O governo assina um acordo de paz com as FARC, o maior grupo guerrilheiro, para encerrar mais de meio século de confronto com essa organização.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 6. TURISMO -->
+<section class="sec b" id="turismo" aria-labelledby="h-tur">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-tur">Turismo</h2>
+      <p>De cidades coloniais a parques de selva e deserto, a Colômbia reúne destinos para todos os gostos.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">Quatro destinos para começar</h3>
+        <div class="cards" style="grid-template-columns:1fr;margin-top:8px">
+          <article class="card">
+            <h4>Cartagena de Indias</h4>
+            <p class="where">Caribe</p>
+            <p>A Cidade Murada, de ruas coloridas, balcões floridos e muralhas do século XVI, é Patrimônio da Humanidade. Destaque para o Castelo de San Felipe de Barajas, o bairro de Getsemaní e as Ilhas do Rosário.</p>
+          </article>
+          <article class="card">
+            <h4>Bogotá</h4>
+            <p class="where">Região andina, a 2.640 m</p>
+            <p>A capital reúne o bairro histórico de La Candelaria, a Plaza de Bolívar, o Museu do Ouro, com mais de 55 mil peças, e o morro de Monserrate, com vista de toda a cidade. Perto dela está a Catedral de Sal de Zipaquirá.</p>
+          </article>
+          <article class="card">
+            <h4>Medellín</h4>
+            <p class="where">Vale de Aburrá, Antioquia</p>
+            <p>Chamada de “cidade da eterna primavera” pelo clima ameno, tem a Plaza Botero com esculturas do artista, a Comuna 13, famosa pelos grafites, e a Feira das Flores. Perto fica a Piedra del Peñol, em Guatapé.</p>
+          </article>
+          <article class="card">
+            <h4>Parque Nacional Natural Tayrona</h4>
+            <p class="where">Perto de Santa Marta, Caribe</p>
+            <p>Criado em 1964, protege praias de areia clara, florestas tropicais e recifes. O território é sagrado para povos como os Kogui, Arhuaco e Wiwa. Trilhas levam a baías como Cabo San Juan e a vestígios de aldeias tayronas. O parque fecha em alguns períodos para o descanso da natureza e para rituais indígenas.</p>
+          </article>
+        </div>
+      </div>
+      <figure class="sticky">
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Ilustração de fachadas coloridas com balcões e uma torre de igreja, ao estilo das cidades coloniais caribenhas, com mar e sol ao fundo">
+            <defs>
+              <linearGradient id="gSky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7EC1F2"/><stop offset="1" stop-color="#FFE7B0"/></linearGradient>
+              <g id="jan"><rect width="16" height="28" rx="4" fill="#FFF4D6"/><rect width="16" height="28" rx="4" fill="none" stroke="#14203C" stroke-opacity=".35"/><line x1="8" y1="0" x2="8" y2="28" stroke="#14203C" stroke-opacity=".3"/></g>
+              <g id="bal"><rect x="-6" y="0" width="40" height="4" fill="#2B1B12"/><g stroke="#2B1B12" stroke-width="2"><line x1="-2" y1="4" x2="-2" y2="14"/><line x1="6" y1="4" x2="6" y2="14"/><line x1="14" y1="4" x2="14" y2="14"/><line x1="22" y1="4" x2="22" y2="14"/><line x1="30" y1="4" x2="30" y2="14"/></g><rect x="-6" y="14" width="40" height="3" fill="#2B1B12"/></g>
+            </defs>
+            <rect width="560" height="380" fill="url(#gSky2)"/>
+            <circle cx="490" cy="62" r="28" fill="#FCD116"/>
+            <rect y="300" width="560" height="80" fill="#1F78B4"/>
+            <g fill="none" stroke="#8FD0F2" stroke-width="3" stroke-linecap="round"><path d="M20 330 q10 -7 20 0 q10 7 20 0"/><path d="M300 345 q10 -7 20 0 q10 7 20 0"/><path d="M450 328 q10 -7 20 0 q10 7 20 0"/></g>
+            <rect y="290" width="560" height="14" fill="#C9B48A"/>
+            <!-- fachadas -->
+            <rect x="30" y="130" width="100" height="162" fill="#F2B134"/>
+            <use href="#jan" x="46" y="146"/><use href="#jan" x="88" y="146"/><use href="#bal" x="44" y="176"/><use href="#bal" x="86" y="176"/>
+            <use href="#jan" x="46" y="214"/><use href="#jan" x="88" y="214"/>
+            <rect x="130" y="98" width="96" height="194" fill="#E8554E"/>
+            <use href="#jan" x="146" y="114"/><use href="#jan" x="188" y="114"/><use href="#bal" x="144" y="144"/><use href="#bal" x="186" y="144"/>
+            <use href="#jan" x="146" y="182"/><use href="#jan" x="188" y="182"/><use href="#bal" x="144" y="212"/><use href="#bal" x="186" y="212"/>
+            <rect x="226" y="70" width="70" height="222" fill="#F4EAD0"/>
+            <path d="M226 70 Q261 14 296 70Z" fill="#C9553D"/>
+            <line x1="261" y1="30" x2="261" y2="10" stroke="#14203C" stroke-width="3"/><line x1="254" y1="17" x2="268" y2="17" stroke="#14203C" stroke-width="3"/>
+            <path d="M246 130 a15 15 0 0 1 30 0 v36 h-30Z" fill="#6B3A2A"/>
+            <path d="M246 200 a15 15 0 0 1 30 0 v50 h-30Z" fill="#6B3A2A"/>
+            <rect x="296" y="120" width="100" height="172" fill="#2C6FBB"/>
+            <use href="#jan" x="312" y="136"/><use href="#jan" x="354" y="136"/><use href="#bal" x="310" y="166"/><use href="#bal" x="352" y="166"/>
+            <use href="#jan" x="312" y="204"/><use href="#jan" x="354" y="204"/>
+            <rect x="396" y="140" width="92" height="152" fill="#F28FAD"/>
+            <use href="#jan" x="410" y="156"/><use href="#jan" x="450" y="156"/><use href="#bal" x="408" y="186"/><use href="#bal" x="448" y="186"/>
+            <use href="#jan" x="410" y="224"/><use href="#jan" x="450" y="224"/>
+            <rect x="488" y="110" width="72" height="182" fill="#4DB39E"/>
+            <use href="#jan" x="504" y="126"/><use href="#jan" x="534" y="126"/><use href="#bal" x="502" y="156"/>
+            <use href="#jan" x="504" y="194"/><use href="#jan" x="534" y="194"/>
+            <use href="#palma" transform="translate(24 300) scale(.7)"/>
+          </svg>
+        </div>
+        <figcaption>Fachadas coloridas e balcões floridos marcam as cidades coloniais do Caribe colombiano.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Outros lugares que valem a visita</h3>
+    <ul class="chips">
+      <li><b>Eixo Cafeeiro e Vale de Cocora:</b> colinas de café e palmeiras-de-cera gigantes perto de Salento. A paisagem cafeeira é Patrimônio da UNESCO.</li>
+      <li><b>Caño Cristales:</b> o “rio das cinco cores”, na Serranía de la Macarena.</li>
+      <li><b>Ciudad Perdida (Teyuna):</b> cidade tayrona de pedra, alcançada por uma trilha de vários dias na selva.</li>
+      <li><b>San Andrés e Providencia:</b> ilhas caribenhas de mar azul e recifes de coral.</li>
+      <li><b>Villa de Leyva e Barichara:</b> povoados coloniais de casas brancas e ruas de pedra.</li>
+      <li><b>Santa Cruz de Mompox:</b> cidade colonial às margens do rio Magdalena, Patrimônio da Humanidade.</li>
+      <li><b>San Agustín:</b> parque arqueológico com estátuas de pedra milenares.</li>
+      <li><b>Santuário de Las Lajas:</b> igreja construída sobre um desfiladeiro, perto de Ipiales.</li>
+      <li><b>Leticia e o Amazonas:</b> floresta, botos-cor-de-rosa e comunidades indígenas na tríplice fronteira.</li>
+      <li><b>Popayán:</b> a “cidade branca”, famosa pelas procissões da Semana Santa.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. ECONOMIA -->
+<section class="sec alt r" id="economia" aria-labelledby="h-eco">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-eco">Economia</h2>
+      <p>A economia colombiana é diversificada. Os serviços e o comércio têm o maior peso, mas o campo, a mineração e o petróleo também são muito importantes. A moeda é o peso colombiano.</p>
+    </div>
+
+    <div class="split rev">
+      <div>
+        <h3 style="margin-top:0">O café</h3>
+        <p>A Colômbia é um dos maiores produtores de café do mundo e é conhecida pelo café arábica suave. O grão é cultivado nas encostas das cordilheiras, em geral entre 1.200 e 2.000 metros de altitude, por mais de meio milhão de famílias, na maioria em pequenas propriedades.</p>
+        <p>As cerejas do café são colhidas uma a uma, à mão. As regiões de Caldas, Risaralda, Quindío, Huila e Nariño estão entre as mais conhecidas, e a Paisagem Cultural Cafeeira é Patrimônio da UNESCO desde 2011.</p>
+
+        <h3>Petróleo e mineração</h3>
+        <p>O petróleo é historicamente o principal produto de exportação do país. A Colômbia também produz carvão, como na grande mina do Cerrejón, na Guajira, além de níquel e ouro.</p>
+        <p>O país é o maior produtor mundial de <strong>esmeraldas</strong>, extraídas principalmente em Boyacá, nas regiões de Muzo e Chivor.</p>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Ilustração de um galho de cafeeiro com folhas verdes e frutos vermelhos, ao lado de um saco de café">
+            <rect width="560" height="380" fill="#E3F1DE"/>
+            <path d="M20 300 C150 260 260 270 360 200 S500 130 545 90" fill="none" stroke="#5B3A1E" stroke-width="10" stroke-linecap="round"/>
+            <g fill="#2E7D32">
+              <ellipse cx="110" cy="244" rx="48" ry="20" transform="rotate(-30 110 244)"/>
+              <ellipse cx="150" cy="300" rx="48" ry="20" transform="rotate(20 150 300)"/>
+              <ellipse cx="240" cy="232" rx="48" ry="20" transform="rotate(-35 240 232)"/>
+              <ellipse cx="272" cy="300" rx="48" ry="20" transform="rotate(25 272 300)"/>
+              <ellipse cx="350" cy="158" rx="48" ry="20" transform="rotate(-40 350 158)"/>
+              <ellipse cx="385" cy="236" rx="48" ry="20" transform="rotate(30 385 236)"/>
+              <ellipse cx="452" cy="112" rx="46" ry="19" transform="rotate(-30 452 112)"/>
+              <ellipse cx="478" cy="168" rx="46" ry="19" transform="rotate(35 478 168)"/>
+            </g>
+            <g fill="#1B5E20" opacity=".35"><ellipse cx="116" cy="248" rx="30" ry="6" transform="rotate(-30 116 248)"/><ellipse cx="246" cy="236" rx="30" ry="6" transform="rotate(-35 246 236)"/><ellipse cx="356" cy="162" rx="30" ry="6" transform="rotate(-40 356 162)"/></g>
+            <g fill="#C0392B"><circle cx="192" cy="270" r="12"/><circle cx="210" cy="286" r="12"/><circle cx="228" cy="272" r="12"/><circle cx="414" cy="205" r="12"/><circle cx="432" cy="220" r="12"/><circle cx="406" cy="224" r="12"/></g>
+            <g fill="#E5A823"><circle cx="300" cy="246" r="11"/><circle cx="316" cy="260" r="11"/><circle cx="296" cy="264" r="11"/></g>
+            <g fill="#fff" opacity=".5"><circle cx="188" cy="265" r="3"/><circle cx="206" cy="281" r="3"/><circle cx="410" cy="200" r="3"/></g>
+            <path d="M360 380 L372 286 Q430 262 488 286 L500 380Z" fill="#CDAA7D"/>
+            <path d="M372 286 Q430 306 488 286" fill="none" stroke="#9B7B4F" stroke-width="4"/>
+            <text x="432" y="346" font-size="30" font-weight="800" fill="#5B3A1E" text-anchor="middle">Café</text>
+            <g fill="#5B3A1E"><ellipse cx="300" cy="352" rx="17" ry="11" transform="rotate(-25 300 352)"/><ellipse cx="330" cy="362" rx="17" ry="11" transform="rotate(15 330 362)"/><ellipse cx="266" cy="364" rx="17" ry="11" transform="rotate(30 266 364)"/></g>
+            <g fill="none" stroke="#CDAA7D" stroke-width="2"><path d="M287 357 Q300 348 313 347"/><path d="M317 360 Q330 360 343 365"/><path d="M253 358 Q266 362 279 371"/></g>
+          </svg>
+        </div>
+        <figcaption>Cafeeiro com frutos maduros (vermelhos) e ainda verdes ou amarelados, prontos para a colheita manual.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Agricultura, flores e pecuária</h3>
+    <div class="cards">
+      <article class="card"><h4>Flores</h4><p>A Colômbia é um dos maiores exportadores mundiais de flores cortadas. As estufas ficam sobretudo perto de Bogotá e em Antioquia, e as rosas e cravos vão em grande parte para os Estados Unidos.</p></article>
+      <article class="card"><h4>Banana e frutas</h4><p>A banana é exportada há décadas. O abacate Hass, o cacau e as frutas tropicais ganham espaço no comércio exterior.</p></article>
+      <article class="card"><h4>Cana, palma e arroz</h4><p>A cana-de-açúcar, a palma-de-óleo e o arroz são cultivados em vales quentes como o do rio Cauca e em regiões dos Llanos.</p></article>
+      <article class="card"><h4>Batata e milho</h4><p>Nas terras altas, pequenas propriedades produzem batata, milho, feijão e hortaliças que abastecem as cidades.</p></article>
+      <article class="card"><h4>Pecuária</h4><p>A criação de gado é tradicional nos Llanos e no Caribe, e fornece carne e leite para o mercado interno.</p></article>
+    </div>
+
+    <h3>Indústria, comércio e serviços</h3>
+    <p>A indústria produz alimentos e bebidas, tecidos e roupas, produtos químicos, plásticos e veículos. O comércio exterior é feito principalmente com os Estados Unidos, a China e países vizinhos como o Equador, o Panamá e o Peru. O setor de serviços, que inclui comércio, bancos, transportes e turismo, é o que mais emprega.</p>
+    <aside class="fact r"><p><strong>Cidades com vocação própria:</strong> Bogotá é o centro financeiro e administrativo, Medellín é conhecida pela indústria têxtil e pelas flores, Cali pelo açúcar e Barranquilla e Cartagena pelos portos.</p></aside>
+  </div>
+</section>
+
+<!-- 8. BIODIVERSIDADE -->
+<section class="sec" id="biodiversidade" aria-labelledby="h-bio">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-bio">Biodiversidade</h2>
+      <p>A Colômbia é um dos países “megadiversos” do planeta: ocupa menos de 1% da superfície da Terra e abriga cerca de 10% das espécies conhecidas.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <p>Essa riqueza vem da combinação de montanhas, dois oceanos, floresta amazônica, selvas úmidas e planícies. Cada altitude e cada região tem seus próprios bichos e plantas.</p>
+        <ul class="plain">
+          <li><strong>Aves:</strong> é o país com mais espécies de aves do mundo, cerca de 1.900, entre elas colibris, tucanos, araras e o galo-da-serra.</li>
+          <li><strong>Orquídeas:</strong> abriga mais de 4 mil espécies. A <em>Cattleya trianae</em> é a flor nacional.</li>
+          <li><strong>Anfíbios e borboletas:</strong> as florestas guardam uma enorme variedade, incluindo pequenas rãs de cores vivas.</li>
+          <li><strong>Páramos:</strong> o país tem a maior extensão de páramos do planeta, ecossistema raro de altitude.</li>
+        </ul>
+        <aside class="fact"><p><strong>Chiribiquete:</strong> na Amazônia colombiana fica o maior parque nacional de floresta tropical do mundo, com mais de 4 milhões de hectares. É Patrimônio da UNESCO e tem milhares de pinturas rupestres em paredões de pedra.</p></aside>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Ilustração de floresta tropical com um tucano em um galho, folhas grandes e uma pequena rã dourada">
+            <rect width="560" height="380" fill="#BFE3C0"/>
+            <rect y="0" width="560" height="170" fill="#9AD1A3"/>
+            <path d="M0 0 L0 200 Q60 150 90 60 Q120 120 170 40 Q190 100 240 0Z" fill="#1F6B3A"/>
+            <path d="M560 0 L560 220 Q500 160 470 70 Q440 130 390 40 Q370 100 330 0Z" fill="#175C32"/>
+            <path d="M0 380 L0 250 Q70 260 120 330 Q150 300 200 380Z" fill="#2E8B57"/>
+            <path d="M560 380 L560 260 Q490 270 440 340 Q410 310 360 380Z" fill="#1F7A47"/>
+            <line x1="110" y1="258" x2="480" y2="236" stroke="#5B3A1E" stroke-width="12" stroke-linecap="round"/>
+            <path d="M345 240 L382 306 L350 300 L328 246Z" fill="#111"/>
+            <ellipse cx="330" cy="192" rx="46" ry="62" fill="#111" transform="rotate(-12 330 192)"/>
+            <ellipse cx="312" cy="182" rx="22" ry="32" fill="#FFF3C8" transform="rotate(-12 312 182)"/>
+            <circle cx="300" cy="120" r="29" fill="#111"/>
+            <path d="M318 108 C380 98 414 118 424 142 C392 156 340 152 318 134Z" fill="#F7A21B"/>
+            <path d="M390 108 C410 116 420 130 424 142 C410 146 398 147 388 146Z" fill="#CE1126"/>
+            <path d="M318 126 C350 128 390 128 422 142" fill="none" stroke="#B96A00" stroke-width="3"/>
+            <circle cx="306" cy="114" r="10" fill="#3BA3D9"/><circle cx="306" cy="114" r="5" fill="#fff"/><circle cx="307" cy="114" r="2.5" fill="#111"/>
+            <g stroke="#E9B120" stroke-width="4" stroke-linecap="round"><line x1="320" y1="246" x2="316" y2="260"/><line x1="334" y1="248" x2="334" y2="262"/></g>
+            <ellipse cx="170" cy="312" rx="78" ry="26" fill="#3C9B5A" transform="rotate(-8 170 312)"/>
+            <ellipse cx="150" cy="292" rx="26" ry="16" fill="#FFD400"/>
+            <circle cx="140" cy="278" r="6" fill="#FFD400"/><circle cx="160" cy="278" r="6" fill="#FFD400"/>
+            <circle cx="140" cy="277" r="2.5" fill="#111"/><circle cx="160" cy="277" r="2.5" fill="#111"/>
+            <g fill="#CE1126"><circle cx="85" cy="130" r="9"/><circle cx="100" cy="146" r="9"/><circle cx="76" cy="150" r="9"/></g>
+            <g fill="#FCD116"><circle cx="500" cy="150" r="8"/><circle cx="516" cy="166" r="8"/></g>
+          </svg>
+        </div>
+        <figcaption>Tucano, rã dourada e a vegetação das florestas úmidas colombianas.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Animais que vivem na Colômbia</h3>
+    <div class="cards">
+      <article class="card"><h4>Onça-pintada</h4><p>Maior felino das Américas, vive na Amazônia, nos Llanos e em florestas do Caribe e do Pacífico.</p></article>
+      <article class="card"><h4>Urso-de-óculos</h4><p>Única espécie de urso da América do Sul, habita florestas de montanha e páramos andinos.</p></article>
+      <article class="card"><h4>Condor-dos-andes</h4><p>Uma das maiores aves voadoras do mundo, é símbolo nacional e aparece no escudo do país.</p></article>
+      <article class="card"><h4>Boto-cor-de-rosa</h4><p>Golfinho de rio das bacias do Amazonas e do Orinoco, nada entre as árvores na época das cheias.</p></article>
+      <article class="card"><h4>Baleia-jubarte</h4><p>De julho a outubro, vem se reproduzir no Pacífico colombiano, perto de Nuquí e Bahía Solano.</p></article>
+      <article class="card"><h4>Rã-dourada-venenosa</h4><p>Pequena rã amarela das florestas do Pacífico, uma das mais tóxicas do mundo. Seu veneno era usado pelos povos Emberá em flechas.</p></article>
+      <article class="card"><h4>Tamanduá-bandeira e anta</h4><p>Grandes mamíferos dos Llanos e da Amazônia, vistos com mais facilidade nos fins de tarde.</p></article>
+      <article class="card"><h4>Preguiças e macacos</h4><p>Dezenas de espécies de primatas e de preguiças vivem nas copas das árvores das florestas.</p></article>
+    </div>
+
+    <h3>Plantas marcantes</h3>
+    <ul class="chips">
+      <li><b>Palmeira-de-cera do Quindío:</b> árvore nacional, é a maior palmeira do mundo, podendo passar de 50 metros de altura.</li>
+      <li><b>Frailejones:</b> plantas de folhas felpudas dos páramos, que captam a umidade da neblina.</li>
+      <li><b>Mangues:</b> florestas que crescem na água salgada, no Caribe e no Pacífico, e abrigam peixes, aves e caranguejos.</li>
+      <li><b>Vitória-régia e plantas aquáticas:</b> típicas dos rios e lagos da Amazônia e do Orinoco.</li>
+      <li><b>Cafeeiros, cacaueiros e bananeiras:</b> cultivos que modelam as paisagens do interior.</li>
+    </ul>
+    <p style="margin-top:18px">Dezenas de áreas protegidas formam o Sistema de Parques Nacionais Naturais, que abrange florestas, recifes, vulcões, páramos e geleiras.</p>
+  </div>
+</section>
+
+<!-- 9. POPULAÇÃO E IDIOMAS -->
+<section class="sec alt b" id="populacao" aria-labelledby="h-pop">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-pop">População e idiomas</h2>
+      <p>Com cerca de 52 milhões de habitantes, a Colômbia é o terceiro país mais populoso da América Latina, depois do Brasil e do México.</p>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">Quem são os colombianos</h3>
+        <p>A maior parte da população vive em cidades, sobretudo nos vales andinos e no litoral caribenho. Bogotá, a maior cidade, passa de 7 milhões de habitantes. Medellín, Cali, Barranquilla e Cartagena também são grandes centros urbanos.</p>
+        <p>A população é resultado de séculos de mistura entre povos:</p>
+        <ul class="plain">
+          <li><strong>Mestiços e brancos:</strong> formam a maioria, com raízes indígenas, europeias e africanas.</li>
+          <li><strong>Afrocolombianos:</strong> concentram-se no litoral do Pacífico, no Caribe e em vales como o do Cauca. Os <em>raizales</em> vivem em San Andrés e Providencia, e os <em>palenqueros</em> em San Basilio de Palenque.</li>
+          <li><strong>Indígenas:</strong> são mais de cem povos, como Wayuu (o maior, na Guajira), Nasa, Zenú, Emberá, Arhuaco e Kogui.</li>
+          <li><strong>Povo Rom:</strong> comunidades ciganas também fazem parte da diversidade do país.</li>
+        </ul>
+        <p>Os apelidos regionais são usados com carinho: <em>cachacos</em> (Bogotá), <em>paisas</em> (Antioquia), <em>costeños</em> (Caribe), <em>caleños</em> (Cali) e <em>pastusos</em> (Pasto).</p>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 560 380" role="img" aria-label="Cinco pessoas diferentes se cumprimentando com expressões típicas colombianas em balões de fala">
+            <rect width="560" height="380" fill="#E2EAFA"/>
+            <rect y="344" width="560" height="36" fill="#CFDAF3"/>
+            <!-- balões -->
+            <g fill="#fff" stroke="#003893" stroke-width="3" stroke-linejoin="round">
+              <rect x="36" y="120" width="110" height="46" rx="14"/><path d="M70 166 L88 166 L78 190Z"/>
+              <rect x="150" y="60" width="150" height="46" rx="14"/><path d="M180 106 L200 106 L190 190Z"/>
+              <rect x="240" y="128" width="100" height="46" rx="14"/><path d="M276 174 L296 174 L288 190Z"/>
+              <rect x="340" y="50" width="120" height="46" rx="14"/><path d="M382 96 L402 96 L392 190Z"/>
+              <rect x="446" y="128" width="104" height="46" rx="14"/><path d="M480 174 L498 174 L490 190Z"/>
+            </g>
+            <g font-size="22" font-weight="700" fill="#003893" text-anchor="middle">
+              <text x="91" y="151">¡Hola!</text><text x="225" y="91">¿Qué más?</text><text x="290" y="159">Parce</text><text x="400" y="81">Chévere</text><text x="498" y="159">Bacano</text>
+            </g>
+            <!-- pessoa 1 -->
+            <path d="M44 344 C44 284 64 268 90 268 C116 268 136 284 136 344Z" fill="#FCD116"/>
+            <circle cx="90" cy="238" r="28" fill="#E0A97D"/>
+            <path d="M62 236 A28 28 0 0 1 118 236 Q90 222 62 236Z" fill="#2B1B12"/>
+            <!-- pessoa 2 -->
+            <rect x="158" y="216" width="64" height="64" rx="28" fill="#2B1B12"/>
+            <path d="M144 344 C144 284 164 268 190 268 C216 268 236 284 236 344Z" fill="#003893"/>
+            <circle cx="190" cy="238" r="28" fill="#8D5A3B"/>
+            <path d="M162 236 A28 28 0 0 1 218 236 Q190 220 162 236Z" fill="#2B1B12"/>
+            <!-- pessoa 3 -->
+            <rect x="260" y="216" width="60" height="70" rx="26" fill="#5A2E14"/>
+            <path d="M244 344 C244 284 264 268 290 268 C316 268 336 284 336 344Z" fill="#CE1126"/>
+            <circle cx="290" cy="238" r="28" fill="#F1C9A5"/>
+            <path d="M262 236 A28 28 0 0 1 318 236 Q290 220 262 236Z" fill="#5A2E14"/>
+            <!-- pessoa 4 com sombrero -->
+            <path d="M344 344 C344 284 364 268 390 268 C416 268 436 284 436 344Z" fill="#FFFFFF" stroke="#B7C3E3" stroke-width="2"/>
+            <circle cx="390" cy="238" r="28" fill="#C98B5B"/>
+            <path d="M364 226 Q364 196 390 196 Q416 196 416 226Z" fill="#EFE0B2" stroke="#1A1A1A" stroke-width="2"/>
+            <ellipse cx="390" cy="226" rx="46" ry="9" fill="#EFE0B2" stroke="#1A1A1A" stroke-width="2"/>
+            <path d="M366 214 Q390 220 414 214" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-dasharray="6 4"/>
+            <!-- pessoa 5 -->
+            <path d="M444 344 C444 284 464 268 490 268 C516 268 536 284 536 344Z" fill="#FCD116"/>
+            <circle cx="490" cy="238" r="28" fill="#6B4228"/>
+            <circle cx="470" cy="216" r="11" fill="#1A1A1A"/><circle cx="490" cy="210" r="12" fill="#1A1A1A"/><circle cx="510" cy="216" r="11" fill="#1A1A1A"/>
+            <!-- rostos -->
+            <g fill="#2B1B12"><circle cx="81" cy="238" r="2.6"/><circle cx="99" cy="238" r="2.6"/><circle cx="181" cy="238" r="2.6"/><circle cx="199" cy="238" r="2.6"/><circle cx="281" cy="238" r="2.6"/><circle cx="299" cy="238" r="2.6"/><circle cx="381" cy="238" r="2.6"/><circle cx="399" cy="238" r="2.6"/><circle cx="481" cy="238" r="2.6"/><circle cx="499" cy="238" r="2.6"/></g>
+            <g fill="none" stroke="#2B1B12" stroke-width="2.5" stroke-linecap="round"><path d="M82 248 Q90 255 98 248"/><path d="M182 248 Q190 255 198 248"/><path d="M282 248 Q290 255 298 248"/><path d="M382 248 Q390 255 398 248"/><path d="M482 248 Q490 255 498 248"/></g>
+          </svg>
+        </div>
+        <figcaption>Gírias colombianas: cumprimentos e expressões do dia a dia.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Espanhol colombiano</h3>
+    <p>O espanhol é o idioma oficial e falado por praticamente toda a população. A Colômbia é um dos países com mais falantes de espanhol do mundo, e o sotaque bogotano (ou <em>rolo</em>) é frequentemente citado como um dos mais claros de entender.</p>
+    <p>O espanhol muda conforme a região. No Caribe, é comum “engolir” o “s” no fim das palavras e falar rápido. Em Antioquia e em Cali, usa-se bastante o “vos” no lugar de “tú”. Em Bogotá, “usted” aparece até entre amigos.</p>
+    <div class="scroll" role="region" aria-label="Expressões colombianas" tabindex="0">
+      <table>
+        <thead><tr><th>Expressão</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td>Parce ou parcero</td><td>amigo, parceiro, “mano”</td></tr>
+          <tr><td>¡Qué chévere! / ¡Qué bacano!</td><td>que legal!</td></tr>
+          <tr><td>¿Qué más?</td><td>e aí? tudo bem?</td></tr>
+          <tr><td>A la orden</td><td>às ordens, no que posso ajudar?</td></tr>
+          <tr><td>Con gusto</td><td>com prazer, de nada</td></tr>
+          <tr><td>Un tinto</td><td>uma xícara de café preto</td></tr>
+          <tr><td>Ahorita</td><td>agora mesmo, daqui a pouco (depende do contexto)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Línguas indígenas, crioulas e outras</h3>
+    <p>A Constituição de 1991 reconhece como oficiais, nos seus territórios, as línguas dos povos indígenas. Ao todo, são cerca de <strong>65 línguas indígenas</strong>, além de dois crioulos e do romani.</p>
+    <ul class="chips">
+      <li><b>Wayuunaiki:</b> língua do povo Wayuu, na Guajira. É uma das mais faladas entre as indígenas.</li>
+      <li><b>Nasa Yuwe:</b> língua do povo Nasa, no departamento do Cauca.</li>
+      <li><b>Emberá:</b> falada por comunidades do Chocó e de regiões vizinhas.</li>
+      <li><b>Ika (Arhuaco) e Kogui:</b> faladas na Sierra Nevada de Santa Marta.</li>
+      <li><b>Palenquero:</b> crioulo de San Basilio de Palenque, que mistura espanhol e línguas africanas.</li>
+      <li><b>Crioulo sanandresano:</b> crioulo de base inglesa falado em San Andrés e Providencia.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10. CURIOSIDADES -->
+<section class="sec r" id="curiosidades" aria-labelledby="h-cur">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-cur">Curiosidades</h2>
+      <p>Alguns fatos que mostram como a Colômbia surpreende.</p>
+    </div>
+
+    <div class="tiles">
+      <article class="tile"><h4>Duas costas</h4><p>É o único país da América do Sul banhado ao mesmo tempo pelo Caribe e pelo Pacífico.</p></article>
+      <article class="tile"><h4>Campeã em aves</h4><p>Nenhum outro país tem tantas espécies de aves: são cerca de 1.900.</p></article>
+      <article class="tile"><h4>Neve perto do mar</h4><p>A Sierra Nevada de Santa Marta tem picos de neve a poucos quilômetros de praias tropicais.</p></article>
+      <article class="tile"><h4>Rio de cinco cores</h4><p>No Caño Cristales, as plantas aquáticas deixam o leito do rio com tons de vermelho, amarelo, verde, azul e preto.</p></article>
+      <article class="tile"><h4>Catedral dentro da terra</h4><p>A Catedral de Sal de Zipaquirá foi construída dentro de uma antiga mina de sal, a cerca de 180 metros de profundidade.</p></article>
+      <article class="tile"><h4>Ciclovía de Bogotá</h4><p>Aos domingos e feriados, mais de 100 km de ruas são fechados aos carros para ciclistas, corredores e pedestres.</p></article>
+      <article class="tile"><h4>Tejo, esporte nacional</h4><p>Os jogadores lançam um disco de metal contra um alvo com pequenas cápsulas de pólvora que explodem quando acertadas.</p></article>
+      <article class="tile"><h4>Muitos feriados</h4><p>São cerca de 18 feriados nacionais por ano, e vários são transferidos para a segunda-feira, criando os “puentes” de fim de semana longo.</p></article>
+      <article class="tile"><h4>Ciudad Perdida é mais antiga que Machu Picchu</h4><p>Teyuna foi fundada por volta do século VIII, cerca de 650 anos antes de Machu Picchu.</p></article>
+      <article class="tile"><h4>Esmeraldas</h4><p>A Colômbia é a maior produtora do mundo dessa pedra verde, muito valorizada.</p></article>
+      <article class="tile"><h4>Museu do Ouro</h4><p>Em Bogotá, guarda mais de 55 mil peças de ouro e de outros materiais feitas por povos pré-hispânicos.</p></article>
+      <article class="tile"><h4>Macondo</h4><p>A cidade imaginária de <em>Cem Anos de Solidão</em>, de Gabriel García Márquez, foi inspirada na vila de Aracataca, no Caribe.</p></article>
+    </div>
+
+    <div class="split" style="margin-top:50px">
+      <div>
+        <h3 style="margin-top:0">A bandeira da Colômbia</h3>
+        <p>A bandeira tem três faixas horizontais: a amarela ocupa metade e as faixas azul e vermelha ocupam um quarto cada.</p>
+        <ul class="plain">
+          <li><strong>Amarelo:</strong> lembra as riquezas do solo, o sol e a soberania.</li>
+          <li><strong>Azul:</strong> representa o céu, os rios e os dois mares que banham o país.</li>
+          <li><strong>Vermelho:</strong> homenageia o sangue derramado pela liberdade e a coragem do povo.</li>
+        </ul>
+        <p>Essas três cores inspiraram as cores deste site.</p>
+      </div>
+      <figure>
+        <div class="fig">
+          <svg viewBox="0 0 360 240" role="img" aria-label="Bandeira da Colômbia, com faixa amarela maior, faixa azul e faixa vermelha">
+            <rect width="360" height="120" fill="#FCD116"/>
+            <rect y="120" width="360" height="60" fill="#003893"/>
+            <rect y="180" width="360" height="60" fill="#CE1126"/>
+          </svg>
+        </div>
+        <figcaption>Proporção da bandeira: 2 partes de amarelo, 1 de azul e 1 de vermelho.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Colômbia: guia educativo</p>
+    <p>Conteúdo informativo sobre geografia, história, cultura, população, economia e natureza da Colômbia. Números como população, área, altitude e quantidade de espécies são aproximados e podem variar conforme a fonte e o ano da pesquisa.</p>
+    <p>As imagens são ilustrações vetoriais criadas para este site.</p>
+    <p><a href="#topo">Voltar ao topo</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var links=[].slice.call(document.querySelectorAll('.topbar nav a'));
+    var byId={};
+    links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+    var secs=[].slice.call(document.querySelectorAll('main section[id]')).filter(function(s){return byId[s.id];});
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        links.forEach(function(a){a.classList.remove('on');a.removeAttribute('aria-current');});
+        var a=byId[e.target.id];
+        if(a){
+          a.classList.add('on');a.setAttribute('aria-current','true');
+          var ul=a.closest('ul');
+          if(ul&&ul.scrollTo){ul.scrollTo({left:a.offsetLeft-ul.clientWidth/2+a.clientWidth/2,behavior:'smooth'});}
+        }
+      });
+    },{rootMargin:'-30% 0px -65% 0px'});
+    secs.forEach(function(s){io.observe(s);});
+  }catch(err){}
+})();
+</script>
+</body>
+</html>
